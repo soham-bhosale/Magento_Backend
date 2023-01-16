@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="enableops" translate="label" sortOrder="250">
+            <label>Enable Ops</label>
+        </tab>
+        <section id="enable_ops" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>enable-ops</class>
+            <label>Enable Ops</label>
+            <tab>enableops</tab>
+            <resource>Hummingbird_Mod9::enable_ops</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Enable Operations</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Ops</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="textsb" type="text" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Storefront text</label>
+                    <comment>Text to display</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

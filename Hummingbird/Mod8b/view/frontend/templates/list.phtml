@@ -1,0 +1,41 @@
+<?php
+$emps = $block->getAllEmployees();
+?>
+<?php if (count($emps) > 0): ?>
+    <table border="1">
+        <tr>
+            <th><?= __("Employee ID") ?></th>
+            <th><?= __("First Name") ?></th>
+            <th><?= __("Last Name") ?></th>
+            <th><?= __("Email ID") ?></th>
+        </tr>
+        <?php foreach ($emps as $emp): ?>
+            <tr>
+                <td><?= $emp->getEmployeeId() ?></td>
+                <td><?= $emp->getFirstName() ?></td>
+                <td><?= $emp->getLastName() ?></td>
+                <td><?= $emp->getEmailId() ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h1 style="color: red"><?= __("Employee Records not found") ?></h1>
+<?php endif; ?>
+<hr />
+<form method="post" action="<?= $block->getPostUrl() ?>">
+    <fieldset style="margin: 0 auto; width: 50%">
+        <div>
+            <label for="first_name"><?= __("First Name") ?></label>
+                <input type="text" name="first_name"/>
+        </div>
+        <div>
+            <label for="last_name"><?= __("Last Name") ?></label>
+                <input type="text" name="last_name"/>
+        </div>
+        <div>
+            <label for="email_id"><?= __("Email Id") ?></label>
+                <input type="text" name="email_id"/>
+        </div>
+        <input type="submit" value="<?= __("Add Employee") ?>" />
+    </fieldset>
+</form>

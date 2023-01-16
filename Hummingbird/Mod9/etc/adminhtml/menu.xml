@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hummingbird_Mod9::enable" title="Enable Ops" translate="title" module="Hummingbird_Mod9" 
+                sortOrder="15" dependsOnModule="Hummingbird_Mod9" resource="Hummingbird_Mod9::enable"/>
+        <add id="Hummingbird_Mod9::enable_ops" title="Enable Options" translate="title" module="Hummingbird_Mod9" 
+                sortOrder="10" parent="Hummingbird_Mod9::enable" resource="Hummingbird_Mod9::enable_ops" />
+        <add id="Hummingbird_Mod9::dropdown" title="Dropdown" translate="title" module="Hummingbird_Mod9" 
+                sortOrder="10" parent="Hummingbird_Mod9::enable_ops" resource="Hummingbird_Mod9::dropdown" 
+                action="admin/system_config/edit/section/enable_ops"/>
+    </menu>
+</config>

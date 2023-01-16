@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <event name="catalog_controller_product_view">
+        <observer instance="Hummingbird\Mod3\Observers\ProductPageLoaded" name="catalog_controller_product_view"/>
+    </event>
+
+    <event name="controller_front_send_response_before">
+        <observer name="page_loaded" instance="Hummingbird\Mod3\Observers\PageHtml"/>
+    </event>
+</config>

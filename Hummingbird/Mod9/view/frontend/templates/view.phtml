@@ -1,0 +1,26 @@
+<?php
+/**
+ * $block
+ */
+
+$isEnable = $block->enable();
+$text = $block->getText();
+echo $text===null;
+// die();
+?>
+
+<p>Block is active</p>
+<?php 
+    if($isEnable){
+        ?>
+        <h2>Text display is enabled.</h2>
+        <br />
+        <h4> Text is :- <?php echo $text; ?></h4>
+        <?php
+    }else{
+        ?>
+        <h2>Text display is disabled</h2>
+        <?php
+    }
+
+?>

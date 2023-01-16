@@ -1,0 +1,19 @@
+<config  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+
+    <type name="Magento\Theme\Block\Html\Header">
+        <plugin name="ChangeWelcomeMsgPlugin" type="Hummingbird\Mod2\Plugins\ChangeWelcomeMsgPlugin"/>
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="ChangeCopyrightTextPlugin" type="Hummingbird\Mod2\Plugins\ChangeCopyrightTextPlugin"/>
+    </type>
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="AddTagOnProductPlugin" type="Hummingbird\Mod2\Plugins\AddTagOnProductPlugin"/>
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="AddVendorToBreadcrumbPlugin" type="Hummingbird\Mod2\Plugins\AddVendorToBreadcrumbPlugin"/>
+    </type>
+</config>
